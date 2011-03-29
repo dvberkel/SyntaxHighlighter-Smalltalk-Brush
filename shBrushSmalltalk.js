@@ -3,7 +3,9 @@ SyntaxHighlighter.brushes.Smalltalk = function()
 	var keywords = 'true false nil self super thisContext';
 	
 	this.regexList = [
-		{ regex: new RegExp(this.getKeywords(keywords), 'gmi'), css: 'keyword'}
+		{ regex: SyntaxHighlighter.regexLib.multiLineDoubleQuotedString, css: 'comments' },
+		{ regex: SyntaxHighlighter.regexLib.multiLineSingleQuotedString, css: 'string' },
+		{ regex: new RegExp(this.getKeywords(keywords), 'gmi'),          css: 'keyword' }
 	];
 };
  
