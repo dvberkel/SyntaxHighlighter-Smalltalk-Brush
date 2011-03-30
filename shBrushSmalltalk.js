@@ -3,13 +3,13 @@ SyntaxHighlighter.brushes.Smalltalk = function()
 	var keywords = 'true false nil self super thisContext';
 	
 	this.regexList = [
-		{ regex: SyntaxHighlighter.regexLib.multiLineDoubleQuotedString, css: 'comments' },
-		{ regex: SyntaxHighlighter.regexLib.multiLineSingleQuotedString, css: 'string' },
-		{ regex: /\b\d+(\.\d+)?\b/gi,                                    css: 'value' },
-		{ regex: /#\w+/gi,                                               css: 'constants'}, 
-		{ regex: /:\w+/g,                                                css: 'variable' },
-		{ regex: /\w+:/g,                                                css: 'functions'},
-		{ regex: new RegExp(this.getKeywords(keywords), 'gm'),           css: 'keyword' }
+		{ regex: SyntaxHighlighter.regexLib.multiLineDoubleQuotedString, css: 'comments' }, // comments
+		{ regex: SyntaxHighlighter.regexLib.multiLineSingleQuotedString, css: 'string' },   // string
+		{ regex: /\b\d+(\.\d+)?\b/gi,                                    css: 'value' },    // numbers
+		{ regex: /#\w+/gi,                                               css: 'constants'}, // symbols
+		{ regex: /:\w+/g,                                                css: 'variable' }, // block paramaters
+		{ regex: /\w+:/g,                                                css: 'functions'}, // keyword messages
+		{ regex: new RegExp(this.getKeywords(keywords), 'gm'),           css: 'keyword' }   // reserved words
 	];
 };
  
