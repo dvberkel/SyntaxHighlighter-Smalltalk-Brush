@@ -6,6 +6,7 @@ SyntaxHighlighter.brushes.Smalltalk = function()
 		{ regex: SyntaxHighlighter.regexLib.multiLineDoubleQuotedString, css: 'comments' },
 		{ regex: SyntaxHighlighter.regexLib.multiLineSingleQuotedString, css: 'string' },
 		{ regex: /\b\d+(\.\d+)?\b/gi,                                    css: 'value' },
+		{ regex: /#\w+/gi,                                               css: 'constants'}, 
 		{ regex: /:\w+/g,                                                css: 'variable' },
 		{ regex: /\w+:/g,                                                css: 'functions'},
 		{ regex: new RegExp(this.getKeywords(keywords), 'gm'),           css: 'keyword' }
